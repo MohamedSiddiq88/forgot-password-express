@@ -2,10 +2,6 @@ import express from "express";
 import dotenv from "dotenv"
 import { usersRouter } from "./Routers/users.js";
 import cors from "cors";
-import { menuRouter } from "./Routers/menu.js";
-import { adminRouter } from "./Routers/admin.js";
-import { ordersRouter } from "./Routers/orders.js";
-import { sendMailRouter } from "./Routers/sendMail.js";
 
 
 
@@ -21,13 +17,9 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/",(req,res)=>{
-    res.send("Welocome to Pizza World1")
+    res.send("Welocome to Password World")
 })
-app.use("/menu",menuRouter);
 app.use("/users",usersRouter)   
-app.use("/admin",adminRouter)
-app.use("/orders",ordersRouter)
-app.get("/mail",sendMailRouter)
 
 
 
