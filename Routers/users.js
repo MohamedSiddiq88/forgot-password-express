@@ -86,7 +86,7 @@ router.post("/checkmail",async(req,res)=>{
     const link = `https://ornate-duckanoo-99a24c.netlify.app/resetpassword?token=${randomString}`;
 
     let transporter = nodemailer.createTransport({
-      service: "Gmail",
+      service: "gmail",
       auth: {
         user: "dingdong88700@gmail.com",
         pass: "diddiq@gmail.com",
