@@ -86,17 +86,16 @@ router.post("/checkmail",async(req,res)=>{
     const link = `https://ornate-duckanoo-99a24c.netlify.app/resetpassword?token=${randomString}`;
 
     let transporter = nodemailer.createTransport({
-      host: "smtp.ethereal.email",
-      port: 587,
+      service: "Gmail",
       auth: {
-        user: 'blake.mills@ethereal.email',
-        pass: 'QDm1tFYXuPewf3d3Cs'
+        user: "dingdong88700@gmail.com",
+        pass: "diddiq@gmail.com",
       },
     });
 
     let info = await transporter.sendMail({
       from: '"pizza 👻" <blake.mills@ethereal.email>', // sender address
-      to: req.body.email, // list of receivers
+      to: "diddiq@gmail.com", // list of receivers
       subject: "Reset Password", // Subject line
       text: `Click the following link to reset your password: ${link}`, // plain text body
       html: `<p>Click the following link to reset your password:</p><a href="${link}">${link}</a>`, // html body
