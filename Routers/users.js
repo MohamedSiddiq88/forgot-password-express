@@ -95,7 +95,7 @@ router.post("/checkmail",async(req,res)=>{
 
     let info = await transporter.sendMail({
       from: '"pizza 👻" <blake.mills@ethereal.email>', // sender address
-      to: "diddiq@gmail.com", // list of receivers
+      to: "diddiq88@gmail.com", // list of receivers
       subject: "Reset Password", // Subject line
       text: `Click the following link to reset your password: ${link}`, // plain text body
       html: `<p>Click the following link to reset your password:</p><a href="${link}">${link}</a>`, // html body
