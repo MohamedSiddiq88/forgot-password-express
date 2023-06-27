@@ -89,13 +89,13 @@ router.post("/checkmail",async(req,res)=>{
       host: "smtp.ethereal.email",
       port: 587,
       auth: {
-        user: 'blake.mills@ethereal.email',
-        pass: 'QDm1tFYXuPewf3d3Cs'
+        user: 'jed.treutel2@ethereal.email',
+        pass: '9mkHGfVzPSTvCFVhwr'
       },
     });
 
     let info = await transporter.sendMail({
-      from: '"pizza 👻" <blake.mills@ethereal.email>', // sender address
+      from: '"pizza 👻" <jed.treutel2@ethereal.email>', // sender address
       to: req.body.email, // list of receivers
       subject: "Reset Password", // Subject line
       text: `Click the following link to reset your password: ${link}`, // plain text body
